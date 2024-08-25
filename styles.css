@@ -69,7 +69,8 @@ footer {
 @media (max-width: 1200px) {
     .projects, .social {
         padding: 15px;
-        margin: 10px 20px; /* Adjusting margin to ensure there's space on mobile */
+        margin: 10px calc(10px + 1%);
+        max-width: 90%;  /* Adjusts to 90% of the viewport or parent container */
     }
 
     header {
