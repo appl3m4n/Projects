@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333;
+}
+
+header {
+    background-color: #4da6ff; /* Blue header */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.projects, .social {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for a modern look */
+    text-align: center; /* Center-align the content */
+}
+
+h2 {
+    color: #0059b3; /* Darker blue for headings */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #0059b3; /* Blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    background-color: #cce6ff; /* Distinct light blue background for social section */
+    border: 1px solid #4da6ff; /* Border to make it stand out */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4da6ff; /* Matching footer color */
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+}
