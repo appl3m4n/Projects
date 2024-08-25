@@ -10,7 +10,7 @@ header {
     background-color: #4da6ff; /* Blue header */
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 0.5em 0;
 }
 
 h1 {
@@ -56,11 +56,25 @@ a:hover {
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 0px 0;
     background-color: #4da6ff; /* Matching footer color */
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+}
+
+/* Responsive Padding for Mobile Devices */
+@media (max-width: 600px) {
+    .projects, .social {
+        padding: 15px;
+        margin: 10px 20px; /* Adjusting margin to ensure there's space on mobile */
+    }
+
+    header {
+        padding: 0.5em; /* Adjusting header padding for smaller screens */
+    }
+
+    
 }
