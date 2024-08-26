@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+        <title>Tik Tok Clone YT</title>
+        <link rel="stylesheet" href="tiktok_style.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    </head>
+        <body>
+            <!-- Sticky header -->
+        <div class="header visible">
+            <!-- Header content goes here -->
+            <h1><a href="index.html">Tiktok Clone Under Construction</a></h1>
+        </div>
+        
+        <div class="app_videos">
+        <!-- video starts -->
+        <div class="video">
+                <video src="video1.mp4" class="video_player" autoplay playsinline></video>
+
+            <!-- sidebar  -->
+            <div class="videoSidebar">
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> favorite_border </span>
+                    <p>12</p>
+                </div>
+
+                <!--<div class="videoSidebar_button">
+                    <span class="material-icons"> chat </span>
+                    <p>23</p>
+                </div>-->
+                
+            </div>
+        <!-- footer -->
+            <div class="videoFooter">
+                <div class="videFooter_text">
+                    <h3>Roman Hrdlovic</h3>
+                    <p class="videoFooter_description">Best AI Ever</p>
+
+                    <div class="videoFooter_ticker">
+                        <span class="material-icons videFooter_icon"> music_note </span>
+                        <marquee>I am gonna make you come</marquee>
+                    </div>
+                </div>
+                <img
+                    class="videoFooter_record"
+                    src="https://static.thenounproject.com/png/934821-200.png"
+                    alt=""/>
+            </div>
+            </div>
+            <!-- video ends -->
+
+            <!-- video starts -->
+        <div class="video">
+            <video src="video2.mp4" class="video_player" playsinline></video>
+
+        <!-- sidebar  -->
+        <div class="videoSidebar">
+            <div class="videoSidebar_button">
+                <span class="material-icons"> favorite_border </span>
+                <p>12</p>
+            </div>
+
+            <div class="videoSidebar_button">
+                <span class="material-icons"> chat </span>
+                <p>23</p>
+            </div>
+            
+        </div>
+    <!-- footer -->
+        <div class="videoFooter">
+            <div class="videFooter_text">
+                <h3>Roman Hrdlovic</h3>
+                <p class="videoFooter_description">Best AI Ever</p>
+
+                <div class="videoFooter_ticker">
+                    <span class="material-icons videFooter_icon"> music_note </span>
+                    <marquee>I am gonna make you come</marquee>
+                </div>
+            </div>
+            <img
+                class="videoFooter_record"
+                src="https://static.thenounproject.com/png/934821-200.png"
+                alt=""/>
+        </div>
+        </div>
+        <!-- video ends -->
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const videos = document.querySelectorAll('video');
+        
+                function toggleVideo(video) {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+        
+                videos.forEach(function(video, index) {
+                    video.addEventListener('click', function() {
+                        toggleVideo(video);
+                    });
+                    // Pause the second video initially
+                    if (index === 1) {
+                        video.pause();
+                    }
+                });
+        
+                // Add scroll event listener
+                window.addEventListener('scroll', function() {
+                    // Check if the user has scrolled down enough
+                    if (window.scrollY > window.innerHeight) {
+                        // Select the second video
+                        const secondVideo = document.querySelectorAll('.video_player')[1];
+                        // Play the second video
+                        toggleVideo(secondVideo);
+                    }
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector('.header');
+
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (currentScroll > lastScrollTop) {
+            // Scroll down
+            header.classList.add('hidden');
+        } else {
+            // Scroll up
+            header.classList.remove('hidden');
+        }
+        
+        lastScrollTop = currentScroll;
+    });
+});
+
+        </script>
+        
+        
+    
+        </body>
+    </html>
